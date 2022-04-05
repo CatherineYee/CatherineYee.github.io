@@ -8,170 +8,296 @@
     <title>Document</title>
 </head>
 <style>
-    .container{
-        width:1100px;
+    body{
+        margin: 0;
+        padding: 0;
         
-        margin:0 auto;
-        background-image: url("JacksonYee.jpg");
+
     }
-    h1{
-        background-color:rgb(136, 206, 211);
-        text-align:center;
-        border-radius: 5px;
-        color:black;
+    .all{
+        display: flex;
+        flex: auto;
+        flex-direction: column;
     }
-    .myself{
-        text-align:center;
+    @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 100%; }
+    }
+    #animate-area {
+        /* width: 100%; */
+        height: 100%;
+        background-image: url(bg-clouds.png);
+        background-position: 0px 0px;
+        background-repeat: repeat-x;
+        animation: animatedBackground 40s linear infinite;
+    }
+    .sun{
+        position: fixed;
+        display: flex;
+        flex: auto;
+        background-image: url(sun.png);
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 28%;
+        width: 100%;
+    }
+    .container{
+        display: flex;
+        flex: auto;
+        /* width:70%; */
+        flex-direction: column;
+        margin:200px auto 100px;
+       /* padding: 50px; */
+        color: black;
+        /* background-color: #faf6f6; */
+        /* transition: 5s; */
+        background-image: url("biography.jpg");
+        padding: 80px 100px 50px 100px;
+        width: 60%;  
+        z-index: 999; 
+    }
+    /* .container:hover{
+        background-image: url("biography.jpg");
+        padding: 80px 100px 50px 100px;
+        margin:30px auto;
+        width: 60%;
+    } */
+    .brefintro{
+        display: flex;
+        flex: auto;
+        height: 300px;
+    }
+    .intro{
+        display: flex;
+        flex: auto;
+        background-color: rgba(0, 255, 255, 0);
+        /* align-items: center; */
+
+    }
+    .photo{
+        display: flex;
+        flex: auto;
+        background-image: url("Catherine.jpg");
+        background-size:100%;
+    }
+    .link{
+        display: flex;
+        gap: 40px;
+        margin-right: 20px;
+        justify-content: flex-end;
+
+    }
+    .link1{
+        display: flex;
+
+    }
+    .link2{
+        display: flex;
+
+    }
+    .edu{
+        display: flex;
+
+    }
+    .box{
+        display: flex;
+        flex: auto;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
     }
     h2{
         line-height: 40px;
+        /* margin-left: 40px; */
         padding-left: 15px;
         background-color:rgb(236, 234, 112);
         box-shadow: 5px 5px 5px #eeeeee;
         border-radius: 5px;
         color:black;
+        transition: 3s;
     }
     h2:hover{
         background-color:rgb(243, 220, 245);
-        
+        /* line-height: 50px; */
+        transform: scale(1.05);        
     }
     table{
         
-        margin:5px;
+        /* text-align: center; */
     
     }
     a{
         text-decoration: none;
     }
-    body{
-        color:#eeeeee;
-        /*padding: 5px;*/
+    hr{
+        width:100%;
+         color:#987cb9 ;
+         SIZE:3;
+    }
+    @media (max-width:960px) {
+        #animate-area {
+        /* width: 100%; */
+        height: 100%;
+        background-image: url(bg-clouds.png);
+        background-position: 0px 0px;
+        background-repeat: repeat-x;
+        animation: animatedBackground 40s linear infinite;
+    }
+
+        
     }
 </style>
-<body  >
-   <div class="container">
-    <h1> 贾名阳（Catherine） <br>
-
-    </h1>
-    <div class="myself">
-        <img src="修勾.jpg" height="200px">
-    </div >
-    表单： <a href="http://127.0.0.1:5500/form.html" >click here</a> 
-    <hr>
-    
-    <ul type="">
-       <li>
-          姓名：贾名阳（Catherine） 
-       </li>
-       <li>
-          性别：女 
-       </li>
-       <li>
-           出生年月：2001年5月
-       </li>
-       <li>
-        政治面貌：入党积极分子
-    </li>
-       <li>
-          电话：178****2528
-       </li>
-       <li>
-           邮箱：Joy05311128@163.com
-       </li>
-       <li>
-           学历：本科在读
-       </li>
-       <li>
-        专业：信息管理与信息系统
-    </li>
-      <br> 
-      
-
-    </ul>
-    <hr>
-    <h2> 所获荣誉</h2>
-        <table border=1 width="100%">
-            <tr>
-                <th>时间</th>
-                <th>荣誉</th>
-            </tr>
-            <tr>
-                <td>2020-2021第一学期</td>
-                <td>优秀学生奖学金二等奖</td>
-            </tr>
-            <tr>
-                <td>2020-2021第二学期</td>
-                <td>
-                    <ol>
-                        <li>
-                            优秀学生奖学金一等奖
-                        </li>
-                        <li>
-                            国家励志奖学金
-                        </li>
-                        <li>
-                            优秀学生
-                        </li>
-                        <li>
-                            2021年“访万企，读中国”社会调查项目大赛二等奖
-                        </li>
-                        <li>
-                            第十六届“创业校友杯”松江大学园区创业大赛暨第七届中国国际“互联网+”大学生创新创业大赛上海对外经贸大学校赛三等奖
-                        </li>
-
-                    </ol>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>2021-2022第一学期</td>
-                <td>
-                    <ol>
-                        <li>
-                            优秀学生奖学金一等奖
-                        </li>
-                        <li>
-                            上海对外经贸大学第十四届计算机文化节计算机应用能力大赛优胜奖
-                        </li>
-                       
-
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td>2020-2021第二学期</td>
-                <td>暂无</td>
-            </tr>
-        </table>
-    
-    
-    
-    
-    <h2>专业技能</h2>
-        <ul type="1">
-            <li>
-                英语能力：通过全国大学生英语六级考试，具备良好的英语听、说、读、写能力
-            </li>
-            <li>
-                信管专业，熟练使用Office中的Word、PPT、Excel等办公软件
-            </li>
-            <li>
-                任职院新媒体中心副部长，具有较强的管理及领导能力，且能熟练掌握PS、公众号运营等
-            </li>
+<body  id="animate-area">
+    <div class="all">
+        <div class="sun"></div>
+        <div class="container" >
            
-            ...
-            </li>
-            
-        </ul>
-        <h2>自我评价</h2>
+                <div class="brefintro">
+                    <div class="intro">
+                        <ul type="">
+                            <li>
+                               姓名：Catherine
+                            </li>
+                            <br>
+                            <li>
+                               性别：女 
+                            </li>
+                            <br>
+                            <li>
+                                出生年月：2001年5月
+                            </li>
+                            <br>
+                            <li>
+                             政治面貌：团员
+                             </li>
+                            <br>
+                            <li>
+                               电话：178****2528
+                            </li>
+                            <br>
+                            <li>
+                                邮箱：Joy05311128@163.com
+                            </li>
+                            <br>
+                            <li>
+                                学历：本科在读
+                            </li>
+                             </ul>
+                    </div>
+                    <div class="photo"> </div>
+                </div >
+                <br>
+                <hr>
+    
+    
+                <div class="link">
+                    <div class="link1">
+                        表单： <a href="http://127.0.0.1:5500/form.html" >click here</a> 
+    
+                    </div>
+                    <div class="link2">
+                        官网排版：<a href="http://127.0.0.1:5500/layoutplus.html" >click here</a> 
+    
+                    </div>
+                </div>
+                
+                <hr>
+                <h2>教育背景</h2>
+                <div class="edu">
+                    <div class="box">2020-2024</div>
+                    <div class="box">上海对外经贸大学</div>
+                    <div class="box">信息管理与信息系统/本科</div>
+                    
+                </div>
+                <hr>
+                
+                    <strong>主修课程：</strong>计算机科学导论、程序设计基础、数据结构、Java SE程序设计、数据库原理与设计、计算机网络、数据仓库与数据挖掘、信息系统分析与设计、IT项目管理与实践、管理信息系统、Python程序设计、机器学习、电子商务、Java Web开发、安卓应用程序开发、统计软件(SPSS)、人工智能商业应用、信息管理学、运筹学、微观经济学、宏观经济学、数理统计、线性代数、会计学、管理学原理、企业资源计划(ERP)、ERP(SAP）模拟等。
+                   
+                
+                <h2> 所获荣誉</h2>
+                <table border=1 width="100%">
+                    <tr>
+                        <th>时间</th>
+                        <th>荣誉</th>
+                    </tr>
+                    <tr>
+                        <td>2020-2021第一学期</td>
+                        <td>优秀学生奖学金二等奖</td>
+                    </tr>
+                    <tr>
+                        <td>2020-2021第二学期</td>
+                        <td>
+                            <ol>
+                                <li>
+                                    优秀学生奖学金一等奖
+                                </li>
+                                <li>
+                                    国家励志奖学金
+                                </li>
+                                <li>
+                                    优秀学生
+                                </li>
+                                <li>
+                                    2021年“访万企，读中国”社会调查项目大赛二等奖
+                                </li>
+                                <li>
+                                    第十六届“创业校友杯”松江大学园区创业大赛<br>
+                                    暨第七届中国国际“互联网+”大学生创新创业大赛校赛三等奖
+                                </li>
         
-        信息管理与信息系统专业，有扎实的Java、C语言等专业基础知识参加互联网+大学生创新创业大赛、计算机应用能力大赛并获奖，并于2022年参加美国大学生数学建模大赛、市场调研大赛；现任院学生会新媒体中心副部长及班级学委，有较好业务能力，将担任公司技术部负责人。
-
+                            </ol>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2021-2022第一学期</td>
+                        <td>
+                            <ol>
+                                <li>
+                                    优秀学生奖学金一等奖
+                                </li>
+                                <li>
+                                    校第十四届计算机文化节计算机应用能力大赛优胜奖
+                                </li>
+                               
+        
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020-2021第二学期</td>
+                        <td>暂无</td>
+                    </tr>
+                </table>
+            
+            
+            
+            
+                <h2>专业技能</h2>
+                <ul type="1">
+                    <li>
+                        英语技能：通过全国大学生英语六级考试，具备良好的英语听、说、读、写能力
+                    </li>
+                    <li>
+                        办公技能：熟练使用Office中的Word、PPT、Excel等办公软件
+                    </li>
+                    <li>
+                        其他：任职院新媒体中心副部长，具有较强的管理及领导能力，且能熟练掌握PS、公众号运营等
+                    <!-- </li>
+                    ...
+                    </li> -->
+                    
+                </ul>
+                
+                
+                <!-- 有扎实的Java、C语言等专业基础知识；<br>
+                参加互联网+大学生创新创业大赛、计算机应用能力大赛并获奖，<br>
+                并于2022年参加美国大学生数学建模大赛、市场调研大赛；<br>
+                现属于院学生会部长层一员及班级学委，有较好业务能力。 -->
     
+       </div>
+    </div>
     
-   
-
-   </div>
     
 
 </body>

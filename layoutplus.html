@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ body{
+    margin:0;
+    padding: 0;
+}   
+.container{
+    
+    display: flex;
+    /* justify-content: center;
+    align-items: center; 
+    width: 100%;
+    flex: auto; */
+    background-color: rgb(138, 31, 40);
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    position: fixed;   
+    background-image: url("school.jpg");
+    background-size:cover;
+    height:620px;
+    width:100%;
+}
+.main{
+    
+    width: 100%;
+        display: flex;
+        margin-top: 900px;
+        background-color: rgb(255, 255, 255);
+        /* height: 100px; */
+        z-index: 1;
+        flex-direction: column;
+        
+    }
+ .header{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(26, 100, 184, 0.384);
+    top:0; 
+    width: 100%;
+    color: aliceblue;
+    background: linear-gradient(to bottom, #043268, #fcfcfa00);
+       
+}
+.header1{
+    display: flex;
+    background-color: rgba(211, 28, 202, 0);
+    gap: 20px;
+    align-items: center;
+    /* position: fixed; */
+}
+
+
+.left-correct{
+        display: flex;
+        flex: auto;
+        align-items: center;
+        justify-content: center; 
+        height: 50px;
+        background-color: rgba(29, 235, 74, 0);
+        margin-left: 20px;
+        gap: 5px;
+    }
+    .hlogo{
+        display: flex;
+        flex: auto; 
+        background-color: #0a73eb00;
+        justify-content: center;
+        align-items: center;
+        background-image: url(logo2.png);
+        width: 30%;
+        height: 100px;
+    }
+    #logo{
+        width: 100%;
+    }
+    .right-correct{
+        display: flex;
+        flex: auto;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background-color: rgba(18, 228, 112, 0);
+        margin-right: 20px;
+        gap: 5px;
+    }
+    .header2{
+        display: flex;
+        height: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 255, 255, 0);
+        font-size: larger;
+        gap: 20px;
+}
+
+.box{
+    display: flex;
+    /* flex: auto; */
+    background-color: rgba(68, 0, 255, 0);
+    height: 50px;
+    width: 17%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#bx:hover{
+    border-bottom: 3px solid #C20C0C;
+}
+
+#b1{
+    line-height: 50px;
+    background: linear-gradient(-45deg, #dd76cf, #bd5563);
+}
+#b1:hover{
+    background:#043268;
+}
+#b2{
+    line-height: 50px;
+
+    background: linear-gradient(-45deg, #597ecc, #dd76cf);
+
+}
+#b2:hover{
+    background:#043268;
+}
+#b3{
+    line-height: 50px;
+
+    background: linear-gradient(-45deg, #46dfbd, #597ecc);
+}
+#b3:hover{
+    background:#043268;
+}
+#b4{
+    line-height: 50px;
+
+    background: linear-gradient(-45deg, #ccd63c, #46dfbd);
+
+}
+#b4:hover{
+    background:#043268;
+}
+#b5{
+    line-height: 50px;
+    
+    background: linear-gradient(-45deg, #df7c20, #ccd63c);
+}
+#b5:hover{
+    background:#043268;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: rgba(34, 192, 231, 0);
+    margin-top: 350px;
+    height: 100px;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    /* margin-right: 50px; */
+   
+}
+.htitle{
+    display: flex;
+    flex: auto;
+    background-color:#034998e2;
+    gap: 500px;
+    align-items: center;
+    color: white;
+    /* position: fixed; */
+}
+.title{
+    display: flex;
+    flex: auto;
+    height: 100px;
+    margin-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0);
+    
+    gap: 18px;
+    margin-top: 20px;
+}
+.logo{
+    display: flex;
+    flex: auto; 
+    background-color: #0a73eb00;
+    justify-content: center;
+    align-items: center;
+    background-image: url(logo.png);
+    width: 38%;
+    height: 100px;
+
+    /* background-size: 100%; */
+}
+.titlebox{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    background-color: #0a73eb00;
+    align-items: center;
+    font-size: larger;
+    height: 50px;
+}
+#tb:hover{
+    border-top: 3px solid #fbfbfb;
+
+}
+.mainbox{
+    display: flex;
+    flex: auto;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px #565555;
+    font-size:larger;
+
+}
+.mainbox:hover{
+    background-color:red;
+}
+.newstitle1{
+    display: flex;
+    background-color: #27b2be00;
+    justify-content: center;
+    font-size:xxx-large;
+    color: #112f94;
+    margin-top: 40px;
+    font-weight: 550;
+    font-family: cursive;
+}
+.layout1-1{
+    display: flex;
+    background-color: #ccd63c00;
+    /* height: 500px; */
+    margin-top: 30px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.left1{
+    display: flex;
+    flex: auto;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 2px 2px 2px #565555;
+    overflow:hidden;
+    position: relative;
+
+}
+.name{
+    position: absolute;
+    display: flex;
+    flex: auto;
+    background-color: rgba(0, 0, 0, 0.409);
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: larger;
+    z-index: 9;
+
+}
+.photo{
+    display: block;
+    background-image: url("school.jpg");
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+}
+.photo:hover{
+    transform: scale(1.4);
+}
+
+.right1{
+    display: flex;
+    flex: auto;
+    background-color: #bd556300;
+    /* height: 400px; */
+    gap: 20px;
+}
+
+.left1-1{
+    display: flex;
+    flex: auto;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    box-shadow: 2px 2px 2px #565555;
+    flex-direction: column;
+
+}
+
+.shang-box{
+    display: flex;
+    flex: auto;
+    overflow:hidden;
+}
+.shang{
+    display: block;
+    background-image: url("school.jpg");
+    
+    height: 100%;
+    width: 100%;
+    /* background: url("JacksonYee.jpg") no-repeat;
+    background-size: cover; */
+    transition: all 1s;
+
+    
+}
+.shang:hover{
+    transform: scale(1.4);
+}
+.xia{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: larger;
+}
+.xia:hover{
+    color: red;
+}
+
+
+.right1-2{
+    display: flex;
+    flex: auto;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    box-shadow: 2px 2px 2px #565555;
+    flex-direction: column;
+
+
+}
+.layout1-2{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.more{
+    display: flex;
+    color: rgb(255, 0, 0);
+    /* text-align: right; */
+    justify-content: flex-end;
+    font-size: larger;
+    margin-top: 20px;
+}
+.newstitle2{
+    display: flex;
+    background-color: #46dfbe00;
+    gap: 300px;
+    margin-top: 20px;
+    font-weight: 550;
+    
+}
+.newstitle2-1{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    font-size:xxx-large;
+    color: #000207;
+    font-family: cursive;
+}
+.newstitle2-1:hover{
+    color:#112f94;
+}
+.newstitle2-2{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    font-size:xxx-large;
+    color: #000000;
+    font-family: cursive;
+}
+.newstitle2-2:hover{
+    color:#112f94;
+}
+.layout2{
+    display: flex;
+    margin-top: 40px;
+    gap: 50px;
+}
+.left2{
+    display: flex;
+    flex: auto;
+    background-color: #597dcc00;
+    height: 430px;
+    flex-direction: column;
+    gap:10px;
+}
+.right2{
+    display: flex;
+    flex: auto;
+    background-color: #597dcc00;
+    height: 430px;
+    flex-direction: column;
+    gap:10px;
+}
+.newstitle3{
+    display: flex;
+    background-color: #46dfbe00;
+    gap: 200px;
+    margin-top: 20px;
+    font-weight: 550;
+}
+.newstitle3-1{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    font-size:xxx-large;
+    color: #112f94;
+    font-family: cursive;
+}
+.newstitle3-2{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    font-size:xxx-large;
+    font-family: cursive;
+    color: #112f94;
+}
+.newstitle3-3{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    font-size:xxx-large;
+    font-family: cursive;
+    color: #112f94;
+}
+.layout3{
+    margin-top: 40px;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    background-color: #dd76cf00;
+    gap: 20px;
+}
+.left3{
+    display: flex;
+    flex: auto;
+    background-color: #597dcc00;
+    height: 650px;
+    flex-direction: column;
+    gap:10px;
+}
+.middle{
+    /* display: flex; */
+    /* flex: auto; */
+    height: 620px;
+    width: 40%;
+    background-color: #ccd63c00;
+    flex-direction: column;
+}
+.video{
+    background-color: rgb(253, 253, 253);
+    height: 480px; 
+    
+
+}
+.video-name{
+    display: flex;
+    flex: auto;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: 600;
+}
+.right3{
+    display: flex;
+    /* flex: auto; */
+    width: 30%;
+    background-color: #0ee92b00;
+    height: 600px;
+    flex-direction: column;
+}
+.rbottom{
+    display: flex;
+    width: 100%;
+    background-color: #0ee92b00;
+    height: 600px;
+    flex-direction: row;
+}
+.left3-1{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    
+}
+.right3-2{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+.box3{
+    display: flex;
+    flex: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px #565555;
+    justify-content: center;
+    align-items: center;
+}
+.box3:hover{
+    background-color: red;
+}
+.last{
+    display: flex;
+    flex: auto;
+    height:230px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url(bg-last.png);
+    color: white;
+    /* margin-top: 20px; */
+    background-size: 100%;
+}
+.bg-last{
+    display: flex;
+    width: 100%;
+    background-color: #143861e2;
+    height:200px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    padding-top: 30px;
+    flex-direction: column;
+    
+
+
+}
+.flogo{
+    display: flex;
+    width: 100%;
+    height:40%;
+    background-color: #16cd9600;
+
+}
+.llogo{
+    display: flex;
+    background-image: url(logo3.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    }
+@media (max-width:960px) {
+.hlogo{
+    display: none;
+}
+.left-correct{
+    gap: 2px;
+}
+.right-correct{
+    gap: 2px;
+}   
+.header2{
+    display: none;
+}
+.footer{
+    display: none;
+}
+.htitle{
+    display: none;
+}
+.title{
+    display: none;
+}
+.layout1-1{
+    flex-direction: column;
+}
+.left1{
+    width: 100%;
+}
+.right1{
+    width: 100%;
+}
+.layout1-2{
+    display: none;
+}
+.layout2{
+    flex-direction: column;
+}
+.layout3{
+    flex-direction: column;
+}
+.middle{
+    width: 100%;
+}
+.right3{
+    flex-direction: column;
+    width: 100%;
+}
+.last{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.bg-last{
+    align-items: center;
+
+}
+.flogo{
+    justify-content: center;
+}
+.llogo{
+    background-image: url(logo4.png);
+
+}
+  
+}
+
+
+
+
+    
+</style>
+<body>
+    
+    
+    <div class="container">
+
+
+
+        <div class="bottom">
+            <div class="header">
+                <div class="header1">
+                    <div class="left-correct">
+                        <div class="titlebox" id="tb">学生</div>
+                        <div class="titlebox" >|</div>
+                        <div class="titlebox" id="tb">教工</div>
+                        <div class="titlebox">|</div>
+                        <div class="titlebox" id="tb">校友</div>
+                        <div class="titlebox">|</div>
+                        <div class="titlebox" id="tb">访客</div>
+                    </div>   
+                    <div class="hlogo">
+                        <div class="hlogo" id="logo"></div>
+                    </div>
+                    <div class="right-correct">
+                        <div class="titlebox" id="tb">一网通办</div>
+                        <div class="titlebox">|</div>
+                        <div class="titlebox" id="tb">邮箱</div>
+                        <div class="titlebox">|</div>
+                        <div class="titlebox" id="tb"> VPN</div>
+                        <div class="titlebox">|</div>
+                        <div class="titlebox" id="tb">English</div>
+                    </div>
+                </div>
+                <div class="header2">
+                    <div class="box" id="bx">学校概况</div>
+                    <div class="box" id="bx">机构设置</div>
+                    <div class="box" id="bx">师资队伍</div>
+                    <div class="box" id="bx">科学研究</div>
+                    <div class="box" id="bx">人才培养</div>
+                    <div class="box" id="bx">招生就业</div>
+                    <div class="box" id="bx">国际交流</div>
+                    <div class="box" id="bx">公开事项</div>
+                </div>  
+            </div>
+            <div class="footer">
+                <div class="box" id="b1">校园要闻</div>
+                <div class="box" id="b2">新闻快讯</div>
+                <div class="box" id="b3">媒体报道</div>
+                <div class="box" id="b4">专题网站</div>
+                <div class="box" id="b5">精彩影像</div>
+            </div>
+        </div>
+
+        
+        
+        <div class="main">
+            <div class="htitle">
+                <div class="left-correct">
+                    <div class="titlebox" id="tb">学生</div>
+                    <div class="titlebox" >|</div>
+                    <div class="titlebox" id="tb">教工</div>
+                    <div class="titlebox">|</div>
+                    <div class="titlebox" id="tb">校友</div>
+                    <div class="titlebox">|</div>
+                    <div class="titlebox" id="tb">访客</div>
+                </div>   
+                <div class="right-correct">
+                    <div class="titlebox" id="tb">一网通办</div>
+                    <div class="titlebox">|</div>
+                    <div class="titlebox" id="tb">邮箱</div>
+                    <div class="titlebox">|</div>
+                    <div class="titlebox" id="tb"> VPN</div>
+                    <div class="titlebox">|</div>
+                    <div class="titlebox" id="tb">English</div>
+                </div>
+            </div>
+            <div class="title">
+                <div class="logo"></div>
+                <div class="titlebox" id="bx">学校概况</div>
+                <div class="titlebox" id="bx">机构设置</div>
+                <div class="titlebox" id="bx">师资队伍</div>
+                <div class="titlebox" id="bx">科学研究</div>
+                <div class="titlebox" id="bx">人才培养</div>
+                <div class="titlebox" id="bx">招生就业</div>
+                <div class="titlebox" id="bx">国际交流</div>
+                <div class="titlebox" id="bx">公开事项</div>
+            </div>
+            <div class="newstitle1">校园要闻</div>
+            <div class="layout1-1">
+                <div class="left1">
+                    <div class="photo"></div>
+                    <div class="name">文字</div>
+                </div>
+                <div class="right1">
+                    <div class="left1-1">
+                        <div class="shang-box">
+                            <div class="shang"></div>
+                        </div>
+                        <div class="xia">文字</div>
+                    </div>
+                    <div class="right1-2">
+                        <div class="shang-box">
+                            <div class="shang"></div>
+                        </div>
+                        <div class="xia">文字</div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout1-2">
+                <div class="right1">
+                    <div class="left1-1">
+                        <div class="shang-box">
+                            <div class="shang"></div>
+                        </div>
+                        <div class="xia">文字</div>
+                    </div>
+                    <div class="right1-2">
+                        <div class="shang-box">
+                            <div class="shang"></div>
+                        </div>
+                        <div class="xia">文字</div>
+                    </div>
+                </div>
+                <div class="left1">
+                    <div class="photo"></div>
+                    <div class="name">文字</div>
+
+                </div>
+                
+            </div>
+            <div class="more">更多 ></div>
+            <!-- <div class="newstitle2">
+                <div class="newstitle2-1">新闻快讯</div>
+                <div class="newstitle2-2">媒体报道</div>
+            </div> -->
+            
+            
+            <div class="layout2">
+                <div class="left2">
+                    <div class="newstitle2-1">新闻快讯</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                </div>
+                <div class="right2">
+                    <div class="newstitle2-2">媒体报道</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                </div>
+            </div>
+           
+            <div class="more">更多 ></div>
+            <!-- <div class="newstitle3">
+                <div class="newstitle3-1">科研动态</div>
+                <div class="newstitle3-2">精彩影像</div>
+                <div class="newstitle3-3">专题网站</div>
+            </div> -->
+            
+            <div class="layout3">
+                <div class="left3">
+                    <div class="newstitle3-1">科研动态</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="mainbox">文字</div>
+                    <div class="more">更多 ></div>
+                </div>
+                <div class="middle">
+                    <div class="newstitle3-2">精彩影像</div>
+                    <div class="video">
+                    <video width="100%" height="400" src="video.mp4" controls="controls"></video>
+                    </div>
+                    <div class="video-name">文字</div>
+
+                    <div class="more">更多 ></div>
+                </div>
+                <div class="right3">
+                    <div class="newstitle3-3">专题网站</div>
+                    <div class="rbottom">
+                        <div class="left3-1">
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                        </div>
+                        <div class="right3-2">
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                            <div class="box3">文字</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="last">
+                <div class="bg-last">
+                    <div class="flogo">
+                        <div class="llogo"></div>
+                    </div>
+                <div class="left-correct">
+                    松江校区地址：上海市松江区文翔路1900号，邮编：201620
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+    <div>
+    
+</body>
+</html>
