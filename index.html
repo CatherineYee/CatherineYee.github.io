@@ -18,6 +18,7 @@
         display: flex;
         flex: auto;
         flex-direction: column;
+
     }
     @keyframes animatedBackground {
         from { background-position: 0 0; }
@@ -35,26 +36,42 @@
         position: fixed;
         display: flex;
         flex: auto;
-        background-image: url(sun.png);
         justify-content: flex-end;
         align-items: flex-start;
-        height: 28%;
+        height: 250px;
         width: 100%;
+        /* background-color: aliceblue; */
+        background: linear-gradient(to bottom, rgb(172, 200, 224), #fcfcfa00);
+
+
+    }
+    .img0{
+        background-image: url(sun.png);
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: flex-start;
+
     }
     .container{
         display: flex;
         flex: auto;
-        /* width:70%; */
         flex-direction: column;
-        margin:200px auto 100px;
-       /* padding: 50px; */
+        margin:220px auto 100px;
         color: black;
-        /* background-color: #faf6f6; */
-        /* transition: 5s; */
-        background-image: url("biography.jpg");
-        padding: 80px 100px 50px 100px;
-        width: 60%;  
+        width: 80%;  
         z-index: 999; 
+        
+
+
+    }
+    .img1{
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        background-image: url("biography.jpg");
+        background-size: cover;
+        padding: 80px 100px 250px 100px;
     }
     /* .container:hover{
         background-image: url("biography.jpg");
@@ -76,10 +93,20 @@
     }
     .photo{
         display: flex;
-        flex: auto;
-        background-image: url("Catherine.jpg");
-        background-size:100%;
+        /* flex: auto; */
+        width: 40%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
+    .img2{
+        background-image: url("Catherine.jpg");
+        background-size:cover;
+        width: 100%;
+        height: 100%;
+    }
+        
+    
     .link{
         display: flex;
         gap: 40px;
@@ -135,22 +162,37 @@
          SIZE:3;
     }
     @media (max-width:960px) {
-        #animate-area {
-        /* width: 100%; */
-        height: 100%;
-        background-image: url(bg-clouds.png);
-        background-position: 0px 0px;
-        background-repeat: repeat-x;
-        animation: animatedBackground 40s linear infinite;
+        .sun{
+            display: none;
+        }
+        .container{
+            width: 100%;
+            margin-top: 0;
+            
+        }
+        .img1{
+            display: flex;
+        flex: auto;
+        flex-direction: column;
+        padding: 80px 50px 50px 50px;
+        background: transparent;
+        }
+        .img2{
+            height: 80%;
+        }
+        
     }
 
         
-    }
+    
 </style>
 <body  id="animate-area">
     <div class="all">
-        <div class="sun"></div>
-        <div class="container" >
+        <div class="sun">
+            <div class="img0"></div>
+        </div>
+        <div class="container">
+            <div class="img1" >
            
                 <div class="brefintro">
                     <div class="intro">
@@ -184,7 +226,8 @@
                             </li>
                              </ul>
                     </div>
-                    <div class="photo"> </div>
+                    <div class="photo">
+                        <div class="img2"></div> </div>
                 </div >
                 <br>
                 <hr>
@@ -297,6 +340,9 @@
     
        </div>
     </div>
+
+        </div>
+        
     
     
 
